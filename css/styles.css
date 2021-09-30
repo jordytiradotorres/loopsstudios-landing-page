@@ -1,4 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+:root {
+  box-sizing: border-box;
+  font-size: 15px; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+figure,
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0; }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover; }
+
+ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none; }
+
 body {
-  background-color: red; }
+  position: relative;
+  margin: 0;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Josefin Sans", sans-serif; }
+  body > * {
+    position: relative; }
+  @media (min-width: 768px) {
+    body {
+      justify-content: flex-start; } }
+
+.wrapper {
+  margin: 0 auto; }
+  @media (min-width: 1024px) {
+    .wrapper {
+      max-width: 960px; } }
+
+.gutter {
+  width: 95%;
+  margin: 0 auto; }
+  @media (min-width: 768px) {
+    .gutter {
+      width: 90%; } }
+
+.attribution {
+  font-size: 0.9rem;
+  position: relative;
+  bottom: 0;
+  right: 0;
+  padding: 0.5rem;
+  margin-top: 2rem; }
+
+.hero {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(../../images/mobile/image-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+  @media (min-width: 768px) {
+    .hero {
+      background-image: url(../../images/desktop/image-hero.jpg);
+      background-position: center; } }
+  .hero__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid white;
+    padding: 1.5rem; }
+    @media (min-width: 768px) {
+      .hero__content {
+        left: 30%;
+        width: 380px; } }
+    @media (min-width: 1024px) {
+      .hero__content {
+        left: 40%;
+        width: 740px; } }
+    @media (min-width: 1440px) {
+      .hero__content {
+        left: 31%; } }
+    .hero__content p {
+      color: white;
+      font-size: 3rem;
+      text-transform: uppercase; }
+      @media (min-width: 1024px) {
+        .hero__content p {
+          font-size: 4.8rem; } }
+
+.header {
+  z-index: 10; }
+  .header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem; }
+    .header__wrapper .menu {
+      display: none;
+      background-color: black;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 2rem 1.2rem; }
+      @media (min-width: 768px) {
+        .header__wrapper .menu {
+          position: inherit;
+          padding: 0;
+          background-color: transparent;
+          display: block !important; } }
+      .header__wrapper .menu__header {
+        display: flex;
+        justify-content: space-between; }
+        @media (min-width: 768px) {
+          .header__wrapper .menu__header {
+            display: none; } }
+      .header__wrapper .menu__list {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%); }
+        @media (min-width: 768px) {
+          .header__wrapper .menu__list {
+            display: flex;
+            transform: translateY(0%); } }
+      .header__wrapper .menu__list * + * {
+        margin-top: 1.5rem; }
+        @media (min-width: 768px) {
+          .header__wrapper .menu__list * + * {
+            margin-top: 0; } }
+      .header__wrapper .menu__link {
+        color: white;
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 2rem;
+        text-transform: uppercase;
+        transition: color 0.2s ease-in-out; }
+        .header__wrapper .menu__link:hover {
+          color: dimgray; }
+      @media (min-width: 768px) {
+        .header__wrapper .menu {
+          display: flex; }
+          .header__wrapper .menu__list * + * {
+            margin-left: 3rem; }
+          .header__wrapper .menu__link {
+            font-size: 1.1rem; } }
+    .header__wrapper .hamburger,
+    .header__wrapper .iconClose {
+      cursor: pointer; }
+      @media (min-width: 768px) {
+        .header__wrapper .hamburger,
+        .header__wrapper .iconClose {
+          display: none; } }
 
 /*# sourceMappingURL=styles.css.map */
