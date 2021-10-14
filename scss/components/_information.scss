@@ -1,0 +1,55 @@
+.information {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+
+  @include mq(medium) {
+    margin-right: auto;
+    width: 85%;
+  }
+
+  &__image {
+    position: relative;
+    margin: 5rem 0;
+  }
+
+  &__description {
+    margin-top: 3rem;
+    text-align: center;
+
+    @include mq(large) {
+      padding-top: 5rem;
+      padding-left: 5rem;
+      padding-bottom: 5rem;
+      width: 500px;
+      text-align: left;
+      margin-top: 0;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      background-color: $white;
+    }
+
+    @include mq(x-large) {
+      left: 48%;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      font-size: 2rem;
+
+      @include mq(medium) {
+        font-size: 3rem;
+      }
+    }
+
+    p {
+      margin-top: 1rem;
+      font-size: 1.3rem;
+
+      @include mq(medium) {
+        font-size: 1rem;
+      }
+    }
+  }
+}

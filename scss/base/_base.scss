@@ -46,11 +46,6 @@ body {
   align-items: center;
   min-height: 100vh;
   font-family: $font-josefin-sans;
-  // background-color: $very-light-grayish-blue;
-
-  & > * {
-    position: relative;
-  }
 
   @include mq(medium) {
     justify-content: flex-start;
@@ -66,11 +61,11 @@ body {
 }
 
 .gutter {
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
 
   @include mq(medium) {
-    width: 90%;
+    width: 85%;
   }
 }
 
