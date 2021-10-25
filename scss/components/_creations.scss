@@ -1,0 +1,117 @@
+.creations {
+  position: relative;
+  margin-bottom: 5rem;
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+
+  @include mq(medium) {
+    margin-bottom: 0;
+  }
+
+  .wrapper-card {
+    @include mq(medium) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 2rem;
+    }
+  }
+
+  .title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+
+    @include mq(medium) {
+      text-align: left;
+      margin-bottom: 5rem;
+    }
+  }
+
+  .card {
+    position: relative;
+    margin-bottom: 1.5rem;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+
+    @include mq(medium) {
+      margin-bottom: 0;
+    }
+
+    &__footer {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 1.5rem;
+      font-size: 1.5rem;
+      color: $white;
+      text-transform: uppercase;
+      width: 120px;
+      z-index: 100;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: $white;
+      filter: opacity(75%);
+      display: none;
+    }
+
+    &:hover::after {
+      display: block;
+    }
+    &:hover p {
+      color: $black;
+      font-weight: bold;
+    }
+
+    & img {
+      width: 100%;
+    }
+  }
+  .card:last-of-type {
+    margin-bottom: 4rem;
+
+    @include mq(medium) {
+      margin-bottom: 0;
+    }
+  }
+
+  .button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 2rem;
+    text-transform: uppercase;
+    padding: 0.5rem 1.5rem;
+    border: thin solid $black;
+    color: $black;
+    cursor: pointer;
+    letter-spacing: 5px;
+    font-weight: 700;
+    font-family: $font-alata;
+    transition: all 0.2s ease-in-out;
+
+    @include mq(medium) {
+      top: 0;
+      bottom: initial;
+      left: initial;
+      right: 0;
+      margin-top: 0;
+      transform: translateX(0%);
+    }
+
+    &:hover {
+      background-color: $black;
+      color: $white;
+    }
+  }
+}

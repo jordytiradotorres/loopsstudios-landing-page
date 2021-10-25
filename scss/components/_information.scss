@@ -2,9 +2,11 @@
   width: 90%;
   margin: 0 auto;
   position: relative;
+  margin-bottom: 5rem;
 
   @include mq(medium) {
     margin-right: auto;
+    margin-bottom: 0;
     width: 85%;
   }
 
@@ -49,6 +51,8 @@
 
       @include mq(medium) {
         font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 5rem;
       }
     }
   }

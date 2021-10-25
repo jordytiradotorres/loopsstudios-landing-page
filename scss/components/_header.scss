@@ -89,6 +89,10 @@
         }
       }
 
+      &__item {
+        position: relative;
+      }
+
       &__list * + * {
         margin-top: 1.5rem;
 
@@ -100,13 +104,30 @@
       &__link {
         color: $white;
         text-decoration: none;
-        font-weight: 400;
+        font-weight: 700;
         font-size: 2rem;
-        text-transform: uppercase;
-        transition: color 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 1.5rem;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 30px;
+          height: 3px;
+          background-color: $white;
+          display: none;
+        }
 
         &:hover {
           color: $very-dark-gray;
+
+          &::after {
+            @include mq(medium) {
+              display: block;
+            }
+          }
         }
       }
 
